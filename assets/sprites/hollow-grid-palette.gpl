@@ -1,0 +1,44 @@
+GIMP Palette
+Name: Hollow Grid - Dark Industrial
+Columns: 8
+#
+0 0 0	Black
+16 16 24	Darkest
+30 28 40	Dark BG
+46 44 60	Panel Dark
+68 64 88	Panel Light
+90 86 110	UI Neutral
+120 116 140	UI Light
+158 154 178	Text Light
+200 196 216	Text Bright
+240 238 248	White
+#
+20 68 100	Blue Dark
+40 108 148	Blue Mid
+68 152 192	Blue Light
+100 188 216	Blue Bright
+#
+88 40 32	Red Dark
+140 64 52	Red Mid
+184 92 72	Red Light
+216 132 108	Red Bright
+#
+36 80 44	Green Dark
+56 128 68	Green Mid
+84 172 92	Green Light
+120 208 128	Green Bright
+#
+80 60 24	Yellow Dark
+132 100 36	Yellow Mid
+180 140 52	Yellow Light
+216 180 76	Yellow Bright
+#
+72 36 96	Purple Dark
+112 64 140	Purple Mid
+152 96 180	Purple Light
+188 132 212	Purple Bright
+#
+60 56 36	Brown Dark
+100 92 60	Brown Mid
+140 128 84	Brown Light
+176 164 112	Brown Bright

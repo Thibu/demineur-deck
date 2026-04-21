@@ -1,3 +1,24 @@
 # Godot 4+ specific ignores
 .godot/
+.import/
 /android/
+.ios/
+
+# Build output
+builds/
+export/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Aseprite backup files
+*.aseprite.bak
