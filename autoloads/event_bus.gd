@@ -29,3 +29,6 @@ signal relic_acquired(relic_id: String)
 
 signal screen_shake_requested(intensity: float, duration: float)
 signal hit_stop_requested(duration: float)
+
+signal game_restart_requested
+signal difficulty_selected(size: String)

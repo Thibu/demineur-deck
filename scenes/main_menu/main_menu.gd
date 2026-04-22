@@ -9,8 +9,7 @@ func _ready() -> void:
 	quit_button.pressed.connect(_on_quit_pressed)
 
 func _on_start_pressed() -> void:
-	EventBus.run_started.emit()
-	print("Hollow Grid — Run started (placeholder)")
+	get_tree().change_scene_to_file("res://scenes/run/game_scene.tscn")
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
