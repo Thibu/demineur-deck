@@ -64,14 +64,10 @@ func _layout_grid() -> void:
 	var cell_size := PlaceholderSprites.CELL_SIZE
 	var grid_w: int = int(s["width"]) * cell_size
 	var grid_h: int = int(s["height"]) * cell_size
-	var fit: float = min(float(_GAME_W) / float(grid_w), float(_GAME_H) / float(grid_h))
-	var scale_factor: int = max(1, int(floor(fit)))
-	_renderer.scale = Vector2(scale_factor, scale_factor)
-	var scaled_w: int = grid_w * scale_factor
-	var scaled_h: int = grid_h * scale_factor
+	_renderer.scale = Vector2.ONE
 	_renderer.position = Vector2(
-		(_GAME_W - scaled_w) / 2.0,
-		(_GAME_H - scaled_h) / 2.0
+		(_GAME_W - grid_w) / 2.0,
+		(_GAME_H - grid_h) / 2.0
 	)
 
 func _on_restart() -> void:

@@ -29,7 +29,6 @@ PlaceholderAudio="*res://assets/audio/placeholder_audio.gd"
 window/size/viewport_width=1440
 window/size/viewport_height=810
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep"
 
 [input_devices]
 
