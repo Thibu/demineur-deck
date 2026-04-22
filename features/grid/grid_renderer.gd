@@ -5,6 +5,7 @@ signal cell_left_clicked(pos: Vector2i)
 signal cell_right_clicked(pos: Vector2i)
 signal cell_middle_clicked(pos: Vector2i)
 signal cascade_finished
+signal cascade_cell_revealed(count: int, total: int)
 
 var _grid_data: GridData = null
 var _cells: Dictionary = {}
@@ -12,6 +13,8 @@ var _reveal_queue: Array[Vector2i] = []
 var _reveal_timer: float = 0.0
 var _reveal_speed: float = 0.02
 var _is_cascading: bool = false
+var _cascade_revealed_count: int = 0
+var _cascade_total: int = 0
 var _cell_scene: PackedScene = preload("res://features/grid/grid_cell.tscn")
 
 func set_grid_data(data: GridData) -> void:
@@ -50,6 +53,8 @@ func cascade_reveal(positions: Array[Vector2i]) -> void:
 	_reveal_queue = positions.duplicate()
 	_is_cascading = true
 	_reveal_timer = 0.0
+	_cascade_revealed_count = 0
+	_cascade_total = positions.size()
 
 func _sort_by_distance(positions: Array[Vector2i]) -> void:
 	if positions.is_empty():
@@ -68,6 +73,8 @@ func _process(delta: float) -> void:
 		var pos: Vector2i = _reveal_queue.pop_front()
 		update_cell(pos)
 		PlaceholderAudio.play_cascade()
+		_cascade_revealed_count += 1
+		cascade_cell_revealed.emit(_cascade_revealed_count, _cascade_total)
 	if _reveal_queue.is_empty():
 		_is_cascading = false
 		cascade_finished.emit()

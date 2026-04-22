@@ -50,7 +50,7 @@ func _start_game() -> void:
 	data.mine_count = s["mines"]
 	_renderer.set_grid_data(data)
 	_grid_actions.setup(data, _renderer)
-	_grid_effects.setup(data, self)
+	_grid_effects.setup(data, self, _renderer)
 	_mine_label.text = "Mines: %d" % s["mines"]
 	_timer_label.text = "Time: 0.0"
 	_status_label.text = ""
